@@ -40,10 +40,13 @@ def pick_fetureC(name)
   File.read("engineerlist.txt").each_line do|line| 
     engineers.push(line) 
   end
-  puts search
+
   for i in 0...engineers.size
-    if engineers[i].include?("#{search}") 
-      puts engineers[i]
+    if engineers[i].include?("#{search}")
+      if search != ""
+        puts engineers[i]
+      end
+
       break
     end
   end
