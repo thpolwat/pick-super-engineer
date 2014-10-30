@@ -11,7 +11,7 @@ def random_pick
 end
 
 def pick_FeatureB(name)
-  sp_n = name.split(" ") #split name == " "
+  sp_n = name.split(".") #split name == " "
   sp_c =  sp_n[1].split("") #split character
   sFB = sp_n[0] + " " + sp_c[0] + "..."
   puts sFB
