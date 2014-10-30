@@ -11,18 +11,20 @@ def random_pick
   pick_fetureC(eng_list)
 end
 
+def pick_FeatureB(name)
+  sp_n = name.split(".") #split name == " "
+  sp_c = sp_n[1].split(//) #split character
+  sFB = sp_n[0] + " " + sp_c[0] + "..."
+  puts sFB
+
+end
+
 def pick_fetureC(list_name)
   search = gets.chomp()
   puts "Search name '#{search}'"
   puts list_name[list_name.index{|s| s.include?("#{search}")}]
 end
 
-def pick_FeatureB(name)
-  sp_n = name.split(" ") #split name == " "
-  sp_c =  sp_n[1].split("") #split character
-  sFB = sp_n[0] + " " + sp_c[0] + "..."
-  puts sFB
-end
 
 random_pick()
 
